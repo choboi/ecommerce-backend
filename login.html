@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+  <meta charset=”UTF-8”>
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+  <title>Login and Sign Up</title>
+  <style>
+    Body { 
+	font-family: Arial, sans-serif; 
+	}
+    .container { 
+	max-width: 50px; 
+	margin: 50px auto; 
+	padding: 20px; 
+	border: 1px solid #ccc; 
+	border-radius: 5px; 
+	}
+    .form-group { 
+	margin-bottom: 15px; 
+	}
+    Label { 
+	display: block; 
+	margin-bottom: 5px;
+    align: center;	
+	}
+    Input { 
+	width: 20%; 
+	padding: 8px; 
+	box-sizing: border-box;
+    border-radius: 80px;	
+	}
+    Button { 
+	padding: 10px 20px; 
+	background-color: #007BFF; 
+	color: white; border: none; 
+	border-radius: 10px; 
+	cursor: pointer; 
+	}
+    Button:hover { 
+	background-color: #0056b3; 
+	}
+  </style>
+</head>
+<body>
+<center>
+  <div class=”container”>
+    <h2>Sign Up</h2>
+    <form id=”signup-form”>
+	<div class=”form-group”>
+        <label for=”signup-password”>Name</label>
+        <input type=”password” id=”signup-password” name=”name” required>
+      </div>
+      <div class=”form-group”>
+        <label for=”signup-email”>Email</label>
+        <input type="email" id=”signup-email” name=”email” required>
+      </div>
+      <div class=”form-group”>
+        <label for=”signup-password”>Password</label>
+        <input type=”password” id=”signup-password” name=”password” required>
+		<div class=”form-group”>
+        <label for=”signup-password”>Confirm Password</label>
+        <input type=”password” id=”signup-password” name=”password” required>
+      </div>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id=”login-form”>
+      <div class=”form-group”>
+        <label for=”login-email”>Email</label>
+        <input type="email" id=”login-email” name=”email” required>
+      </div>
+      <div class=”form-group”>
+        <label for=”login-password”>Password</label>
+        <input type="password" id=”login-password” name=”password” required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+	<h3>reset-password</h3>
+	 <div class="forget-password">
+	  <button type="reset">forget-passwords</button>
+	  </div>
+  </div>
+</center>
+  <script>
+    Document.getElementById(‘signup-form’).addEventListener(‘submit’, € => {
+      e.preventDefault();
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+
+      console.log(‘Sign-Up Data:’, { name, email, password });
+      // Send this data to your back-end via an API call
+    });
+
+    Document.getElementById(‘login-form’).addEventListener(‘submit’, € => {
+      e.preventDefault();
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+
+      console.log(‘Login Data:’, { email, password });
+      // Send this data to your back-end via an API call
+    });
+  </script>
+</body>
+</html>
+

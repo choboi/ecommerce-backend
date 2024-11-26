@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset=”UTF-8”>
+    <title>{{ question[1] }}</title>
+</head>
+<body>
+    <h1>{{ question[1] }}</h1>
+    <p>{{ question[2] }}</p>
+    <h2>Answers</h2>
+    <ul>
+        {% for answer in answers %}
+        <li>{{ answer[2] }}</li>
+        {% end for %}
+    </ul>
+    <form method="post" action=”{{ url_for(‘answer_question’, question_id=question[0]) }}”>
+	<div>
+	     <label for="question">ask</label>
+        <textarea name=”content” placeholder=”Your answer”></textarea>
+		</div>
+        <button type="submit">Submit Answer</button>
+    </form>
+    <a href=”{{ url_for(‘home’) }}”>Back to Home</a>
+</body>
+</html>

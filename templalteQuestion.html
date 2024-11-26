@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset=”UTF-8”>
+    <title>Ask a Question</title>
+	<style>
+	Body { 
+	font-family: Arial, sans-serif; 
+	}
+    .container { 
+	max-width: 50px; 
+	margin: 50px auto; 
+	padding: 20px; 
+	border: 1px solid #ccc; 
+	border-radius: 5px; 
+	}
+	.form { 
+	margin-bottom: 15px; 
+	}
+	 Input { 
+	width: 20%; 
+	padding: 8px; 
+	box-sizing: border-box;
+    border-radius: 80px;	
+	}
+    Button { 
+	padding: 10px 20px; 
+	background-color: #007BFF; 
+	color: white; border: none; 
+	border-radius: 10px; 
+	cursor: pointer; 
+	}
+    Button:hover { 
+	background-color: #0056b3; 
+	}
+	textarea { 
+	width: 20%; 
+	padding: 8px; 
+	box-sizing: border-box;
+    border-radius: 80px;	
+	}
+	 Label { 
+	display: block; 
+	margin-bottom: 5px;
+    align: center;	
+	}
+	</style>
+</head>
+<body>
+    <div class=container">
+    <h1>Ask a Question</h1>
+    <form method="post">
+	<div class="form">
+	    <label for=”question”>ask question</label>
+        <input type="text" name=”title” placeholder=”Title” required>
+		</div>
+		<div class="form">
+	    <label for=”details”>details</label>
+        <textarea name=”content” placeholder=”Details” required></textarea>
+		</div>
+		<button type="submit">Submit</button>
+    </form>
+	</div>
+    <a href=”{{ url_for(‘home’) }}”>Back to Home</a>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset=”UTF-8”>
+    <title>Q&A Platform</title>
+</head>
+<body>
+    <h1>Questions</h1>
+    <ul>
+        {% for question in questions %}
+        <li>
+            <a href=”{{ url_for(‘view_question’, question_id=question[0]) }}”>{{ question[1] }}</a>
+        </li>
+        {% end for %}
+    </ul>
+    <a href=”{{ url_for(‘ask_question’) }}”>Ask a new question</a>
+</body>
+</html>
